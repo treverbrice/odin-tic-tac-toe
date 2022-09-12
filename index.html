@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A website</title>
+    <title>Tic Tac Toe</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    
+    <h1>Tic Tac Toe</h1>
+    <h3 id="scoreBoard">Player1: 0 | Player2: 0</h3>
+    <h2 id="currentPlayer">Current player: Player1</h2>
+    <form id="playerCreator" action="#">
+        <label for="playerName">Name:</label>
+        <input type="text" name="playerName" id="playerName" placeholder="player" required>
+        <fieldset id="tileSelector">
+            <legend>Choose your tile:</legend>
+            <input type="radio" class="tileButton" name="tile" id="X" value="X" checked>X</input>
+            <input type="radio" class="tileButton" name="tile" id="O" value="O">O</input>
+        </fieldset>
+        <h3 id="player2Tile"></h3>
+        <button type="button" id="playerCreatorSubmitButton">Submit</button>
+    </form>
+    <div id="playArea"></div>
   </body>
 </html>
