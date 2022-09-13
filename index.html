@@ -8,9 +8,11 @@
   </head>
 
   <body>
-    <h1>Tic Tac Toe</h1>
-    <h3 id="scoreBoard">Player1: 0 | Player2: 0</h3>
-    <h2 id="currentPlayer">Current player: Player1</h2>
+    <div id="titleSection">
+      <h1>Tic Tac Toe</h1>
+      <h3 id="scoreBoard">Player1: 0 | Player2: 0</h3>
+      <h2 id="currentPlayer">Current player: Player1</h2>
+    </div>
     <form id="playerCreator" action="#">
         <label for="playerName">Name:</label>
         <input type="text" name="playerName" id="playerName" placeholder="player" required>
@@ -20,8 +22,14 @@
             <input type="radio" class="tileButton" name="tile" id="O" value="O">O</input>
         </fieldset>
         <h3 id="player2Tile"></h3>
-        <button type="button" id="playerCreatorSubmitButton">Submit</button>
+        <!-- prevents enter key from breaking page -->
+        <button type="submit" disabled style="display: none"></button>
+        <button type="button" id="playerCreatorSubmitButton">Enter</button>
     </form>
+    <div id="winnerDisplay">
+      <h2 id="winnerName">Congrats Winner!</h2>
+      <button type="button" id="winnerDisplaySubmitButton">Continue</button>
+    </div>
     <div id="playArea"></div>
   </body>
 </html>
